@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+
+<head>
+
+
+  <h2>Login</h2>
+
+</head>
+<script type="text/javascript" src ="../static/js/sample.js "></script>
+
+{#<script src="{% static 'js/sample.js' %} "></script>#}
+
+<h2>Login</h2>
+<form class="well form-horizontal" action="authn" method="post"  id="contact_form">
+<fieldset>
+    <div class="form-group">
+    <label class="col-md-4 control-label">E-Mail</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+         {% csrf_token %}
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text" id="email">
+    </div>
+  </div>
+</div>
+
+    <div class="form-group">
+    <label class="col-md-4 control-label" >Password</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="user_password" placeholder="Password" class="form-control"  type="password" id="pwd">
+    </div>
+  </div>
+</div>
+
+<div class="form-group" action=" " >
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+      <input type="submit" class="btn btn-warning" />
+
+      </input>
+  </div>
+</div>
+      <a href="Otp " target="_blank">Forgot your password?</a>
+</fieldset>
+</form>
+
+</html>
+
+</html>
